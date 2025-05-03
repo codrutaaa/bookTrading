@@ -38,6 +38,20 @@ public class Main {
             );
             buyerAgent.start();
 
+            AgentController searchAgent = mainContainer.createNewAgent(
+                    "search1",
+                    "examples.bookTrading.SearchAgent",
+                    new Object[] { "Java programming" }
+            );
+            searchAgent.start();
+
+            AgentController userAgent = mainContainer.createNewAgent(
+                    "user",
+                    "examples.bookTrading.UserAgent",
+                    new Object[0]
+            );
+            userAgent.start();
+
 
 
             System.out.println("[DEBUG] MainAgent started successfully.");
